@@ -30,7 +30,7 @@ namespace Crossplay
 
         public static string ConfigPath => Path.Combine(TShock.SavePath, "Crossplay.json");
 
-        private readonly List<int> AllowedVersions = new List<int>() { 230, 233, 234, 235, 236, 237, 238, 242, 243, 244, 245, 246, 247, 269, 270, 271 };
+        private readonly List<int> AllowedVersions = new List<int>() { 230, 233, 234, 235, 236, 237, 238, 242, 243, 244, 245, 246, 247, 269, 270, 271, 272, 273 };
 
         private readonly int[] ClientVersions = new int[Main.maxPlayers];
 
@@ -53,7 +53,9 @@ namespace Crossplay
             { 247, 669 },
             { 269, 688 },
             { 270, 688 },
-            { 271, 688 }
+            { 271, 688 },
+            { 272, 688 },
+            { 273, 688 }
         };
         public static readonly Dictionary<int, int> MaxTiles = new Dictionary<int, int>()
         {
@@ -72,7 +74,9 @@ namespace Crossplay
             { 247, 624 },
             { 269, 693 },
             { 270, 693 },
-            { 271, 693 }
+            { 271, 693 },
+            { 272, 693 },
+            { 273, 693 }
         };
         public static readonly Dictionary<int, int> MaxBuffs = new Dictionary<int, int>()
         {
@@ -91,7 +95,9 @@ namespace Crossplay
             { 247, 335 },
             { 269, 355 },
             { 270, 355 },
-            { 271, 355 }
+            { 271, 355 },
+            { 272, 355 },
+            { 273, 355 }
         };
         public static readonly Dictionary<int, int> MaxProjectiles = new Dictionary<int, int>()
         {
@@ -110,7 +116,10 @@ namespace Crossplay
             { 247, 970 },
             { 269, 1022 },
             { 270, 1022 },
-            { 271, 1022 }
+            { 271, 1022 },
+            { 272, 1022 },
+            { 273, 1022 }
+
         };
         public static readonly Dictionary<int, int> MaxItems = new Dictionary<int, int>()
         {
@@ -129,7 +138,10 @@ namespace Crossplay
             { 247, 5124 },
             { 269, 5453 },
             { 270, 5453 },
-            { 271, 5453 }
+            { 271, 5453 },
+            { 272, 5453 },
+            { 273, 5453 }
+
         };
 
         public CrossplayPlugin(Main game) : base(game)
@@ -712,7 +724,11 @@ namespace Crossplay
                 case 270:
                     return "v1.4.4.1";
                 case 271:
-                    return "v.1.4.4.2";
+                    return "v1.4.4.2";
+                case 272:
+                    return "v1.4.4.3";
+                case 273:
+                    return "v1.4.4.4";
             }
             return $"Unknown{version}";
         }
