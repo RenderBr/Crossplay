@@ -30,7 +30,7 @@ namespace Crossplay
 
         public static string ConfigPath => Path.Combine(TShock.SavePath, "Crossplay.json");
 
-        private readonly List<int> AllowedVersions = new List<int>() { 230, 233, 234, 235, 236, 237, 238, 242, 243, 244, 245, 246, 247, 269, 270, 271, 272, 273 };
+        private readonly List<int> AllowedVersions = new List<int>() { 230, 233, 234, 235, 236, 237, 238, 242, 243, 244, 245, 246, 247, 269, 270, 271, 272, 273, 274 };
 
         private readonly int[] ClientVersions = new int[Main.maxPlayers];
 
@@ -55,7 +55,9 @@ namespace Crossplay
             { 270, 688 },
             { 271, 688 },
             { 272, 688 },
-            { 273, 688 }
+            { 273, 688 },
+            { 274, 688 }
+
         };
         public static readonly Dictionary<int, int> MaxTiles = new Dictionary<int, int>()
         {
@@ -76,7 +78,8 @@ namespace Crossplay
             { 270, 693 },
             { 271, 693 },
             { 272, 693 },
-            { 273, 693 }
+            { 273, 693 },
+            { 274, 693 }
         };
         public static readonly Dictionary<int, int> MaxBuffs = new Dictionary<int, int>()
         {
@@ -97,7 +100,8 @@ namespace Crossplay
             { 270, 355 },
             { 271, 355 },
             { 272, 355 },
-            { 273, 355 }
+            { 273, 355 },
+            { 274, 355 }
         };
         public static readonly Dictionary<int, int> MaxProjectiles = new Dictionary<int, int>()
         {
@@ -118,7 +122,9 @@ namespace Crossplay
             { 270, 1022 },
             { 271, 1022 },
             { 272, 1022 },
-            { 273, 1022 }
+            { 273, 1022 },
+            { 274, 1022 }
+
 
         };
         public static readonly Dictionary<int, int> MaxItems = new Dictionary<int, int>()
@@ -140,7 +146,8 @@ namespace Crossplay
             { 270, 5453 },
             { 271, 5453 },
             { 272, 5453 },
-            { 273, 5453 }
+            { 273, 5453 },
+            { 274, 5453 }
 
         };
 
@@ -729,6 +736,8 @@ namespace Crossplay
                     return "v1.4.4.3";
                 case 273:
                     return "v1.4.4.4";
+                case 274:
+                    return "v1.4.4.5";
             }
             return $"Unknown{version}";
         }
