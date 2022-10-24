@@ -68,6 +68,12 @@ namespace Crossplay
                 _serverVersion = Config.Settings.FakeVersion;
             }
 
+            if (Config.Settings.EnableJourneySupport)
+            {
+                Main.GameMode = 3;
+                
+            }
+
             ServerApi.Hooks.NetGetData.Register(this, OnGetData, int.MaxValue);
             ServerApi.Hooks.ServerLeave.Register(this, OnLeave);
         }
@@ -114,6 +120,7 @@ namespace Crossplay
 
                         if (Main.GameMode == 3 && !bitsbyte[3])
                         {
+                            
                             bitsbyte[0] = false;
                             bitsbyte[1] = false;
 
