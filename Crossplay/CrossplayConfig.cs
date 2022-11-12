@@ -8,6 +8,8 @@ namespace Crossplay
     {
         public bool EnableJourneySupport = false;
 
+        public bool allowJourneyUse = true;
+
         public bool EnablePacketDebugging = false;
 
         public bool FakeVersionEnabled = false;
