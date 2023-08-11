@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Crossplay": {
-      "commandName": "Project",
-      "workingDirectory": "C:\\Users\\Julian\\Documents\\GitHub\\TShock2\\TShockAPI\\bin\\Debug"
-    }
-  }
-}
